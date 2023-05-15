@@ -58,7 +58,7 @@ module "landing_cdn" {
       {
         action = "Append"
         name   = "Content-Security-Policy-Report-Only"
-        value  = "script-src 'self'; style-src 'self'; worker-src 'none'; font-src 'self'; img-src 'self'; "
+        value  = "script-src 'self' 'unsafe-inline' 'unsafe-eval' cdn.matomo.cloud pagopa.matomo.cloud recaptcha.net; style-src 'self' 'unsafe-inline' recaptcha.net; worker-src 'none'; font-src 'self' data:; img-src 'self' recaptcha.net data:; "
       }
     ]
   }
